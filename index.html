@@ -10,14 +10,16 @@
     </head>
     <body>
         <div ng-app="App" ng-controller="Controller" ng-cloak>
-            
+            <ul>
+                <li ng-repeat="Item in Items">{}</li>
+            </ul>
         </div>
         <script>
             angular
             .module("App", [])
             .controller("Controller", ["$scope", function($scope)
             {
-
+                $scope.Items = ["a", "b", "c", "d"];
             }]);
         </script>
     </body>
