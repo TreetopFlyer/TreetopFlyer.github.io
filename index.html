@@ -10,14 +10,14 @@
     </head>
     <body>
         <div ng-app="App" ng-controller="Controller" ng-cloak>
-            
+            <h1 ng-bind="Title"></h1>
         </div>
         <script>
             angular
             .module("App", [])
             .controller("Controller", ["$scope", function($scope)
             {
-
+                $scope.Title = "merge one";
             }]);
         </script>
     </body>
